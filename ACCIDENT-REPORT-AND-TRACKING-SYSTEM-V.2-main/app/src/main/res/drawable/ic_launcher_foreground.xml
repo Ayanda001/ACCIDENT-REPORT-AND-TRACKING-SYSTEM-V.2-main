@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- The ARTS shield and location pin, drawn inside the 66dp safe zone of an adaptive icon -->
+    <group
+        android:scaleX="0.875"
+        android:scaleY="0.875"
+        android:translateX="26"
+        android:translateY="26">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M32,4 8,13v17c0,15.2 10.2,26.6 24,30 13.8,-3.4 24,-14.8 24,-30V13L32,4z" />
+        <path
+            android:fillColor="#0F4C3A"
+            android:pathData="M32,15c-6.1,0 -11,4.7 -11,10.6C21,33 32,44 32,44s11,-11 11,-18.4C43,19.7 38.1,15 32,15z" />
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M32,21.3a4.2,4.2 0,1 0,0.01 0z" />
+    </group>
+</vector>

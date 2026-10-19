@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ARTS</string>
+    <string name="app_subtitle">Accident Report &amp; Tracking System</string>
+
+    <!-- Auth -->
+    <string name="welcome_back">Welcome Back</string>
+    <string name="sign_in_subtitle">Sign in to stay safe</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or">or</string>
+    <string name="biometric_login">Biometric Login</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+
+    <!-- Register -->
+    <string name="create_account">Create Account</string>
+    <string name="join_network">Join ARTS safety network</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="already_have_account">Already have an account?</string>
+
+    <!-- Home -->
+    <string name="stay_safe">Stay Safe, </string>
+    <string name="home_subtitle">Real-time accident reporting &amp; tracking</string>
+    <string name="all_clear">All Clear</string>
+    <string name="no_incidents">No incidents in your area</string>
+    <string name="safety_score">Safety Score</string>
+    <string name="quick_actions">QUICK ACTIONS</string>
+    <string name="report_accident">Report Accident</string>
+    <string name="track_incidents">Track Incidents</string>
+    <string name="emergency_help">Emergency Help</string>
+    <string name="ai_assistant">AI Assistant</string>
+    <string name="features">FEATURES</string>
+    <string name="voice_report">Voice Report</string>
+    <string name="speak_to_report">Speak to report</string>
+    <string name="weather_alert">Weather Alert</string>
+    <string name="current_conditions">Current conditions</string>
+    <string name="community">Community</string>
+    <string name="safety_feed">Safety feed</string>
+    <string name="recent_incidents">RECENT INCIDENTS</string>
+    <string name="incident_map">INCIDENT MAP</string>
+    <string name="nearby_units">Nearby Units</string>
+    <string name="helplines">Helplines</string>
+    <string name="quick_dial">Quick dial</string>
+    <string name="units_active">3 units active</string>
+    <string name="live">Live</string>
+
+    <!-- Incidents -->
+    <string name="incidents">Incidents</string>
+    <string name="search_incidents">Search incidents...</string>
+    <string name="all">All</string>
+    <string name="pending">Pending</string>
+    <string name="in_progress">Forwarded</string>
+    <string name="resolved">Resolved</string>
+    <string name="reported">Reported</string>
+    <string name="responding">Responding</string>
+
+    <!-- Notifications -->
+    <string name="notifications">Notifications</string>
+
+    <!-- Profile -->
+    <string name="profile">Profile</string>
+    <string name="reports">Reports</string>
+    <string name="notification_settings">Notifications</string>
+    <string name="push_alerts">Push alerts, sounds</string>
+    <string name="privacy">Privacy</string>
+    <string name="location_sharing">Location sharing, data</string>
+    <string name="language">Language</string>
+    <string name="english_us">English (US)</string>
+    <string name="security">Security</string>
+    <string name="biometric_2fa">Biometric, 2FA</string>
+    <string name="my_reports">My Reports</string>
+
+    <!-- Bottom Nav -->
+    <string name="nav_home">Home</string>
+    <string name="nav_incidents">Incidents</string>
+    <string name="nav_alerts">Alerts</string>
+    <string name="nav_profile">Profile</string>
+</resources>

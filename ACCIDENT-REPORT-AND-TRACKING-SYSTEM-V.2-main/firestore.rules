@@ -1,0 +1,84 @@
+rules_version = '2';
+
+// ARTS - Cloud Firestore security rules
+// ------------------------------------------------------------------
+// Principles:
+//   * Everyone must be signed in. Nothing is public.
+//   * A user can read and edit only their own profile and their own
+//     incident reports.
+//   * Administrators (a document in /admins/{uid}, created by the
+//     project owner in the Firebase console - never by the app) can
+//     read everything and manage incidents, services and users.
+//   * Medical information lives on the user's own profile document, so
+//     only that user and administrators can read it.
+//   * Two-factor secrets live in a private subcollection that only the
+//     owner can read, not even administrators.
+// ------------------------------------------------------------------
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    function isAdmin() {
+      return signedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // Admin registry. A person can check only their own entry; no one
+    // can write here from the app.
+    match /admins/{uid} {
+      allow get: if isOwner(uid);
+      allow list, write: if false;
+    }
+
+    match /users/{uid} {
+      allow get: if isOwner(uid) || isAdmin();
+      allow list: if isAdmin();
+      allow create: if isOwner(uid) || isAdmin();
+      allow update: if isOwner(uid) || isAdmin();
+      allow delete: if isAdmin();
+
+      match /private/{document} {
+        allow read, write: if isOwner(uid);
+      }
+
+      // Messages shown on the app's Alerts screen. The owner manages them;
+      // an administrator can send one when an incident changes status.
+      match /alerts/{alertId} {
+        allow read, update, delete: if isOwner(uid);
+        allow create: if isOwner(uid) || isAdmin();
+      }
+    }
+
+    match /incidents/{incidentId} {
+      allow get, list: if isAdmin() || (signedIn() && resource.data.reporterId == request.auth.uid);
+      allow create: if isAdmin()
+                    || (signedIn()
+                        && request.resource.data.reporterId == request.auth.uid
+                        && request.resource.data.status in ['Pending', 'Forwarded']);
+      allow update, delete: if isAdmin();
+    }
+
+    match /contractedServices/{serviceId} {
+      allow read: if signedIn();
+      allow write: if isAdmin();
+    }
+
+    // Written by the automatic triage when a user reports an urgent
+    // incident, and by administrators when they forward one by hand.
+    match /dispatchLog/{entryId} {
+      allow create: if signedIn();
+      allow read, update, delete: if isAdmin();
+    }
+
+    match /notifications/{notificationId} {
+      allow create: if signedIn();
+      allow read, update, delete: if isAdmin();
+    }
+  }
+}

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="40dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_back"
+                android:layout_marginEnd="12dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medical Information"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Notice -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="@color/notif_warning_bg"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:text="This information is shown to administrators and emergency responders only when you are the reporter on an incident. It helps them treat you correctly if you cannot speak for yourself."
+                android:textColor="@color/text_primary"
+                android:textSize="12.5sp"
+                android:lineSpacingExtra="2dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Identity -->
+        <TextView
+            style="@style/SectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IDENTITY"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ID number" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/et_id_number" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:paddingHorizontal="14dp" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginBottom="14dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Age" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/et_age" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:paddingHorizontal="14dp" android:inputType="number" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginBottom="14dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gender" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/et_gender" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:paddingHorizontal="14dp" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginBottom="20dp"/>
+
+        <!-- Medical -->
+        <TextView
+            style="@style/SectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MEDICAL"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Blood type" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/et_blood_type" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:paddingHorizontal="14dp" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginBottom="14dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Height (cm)" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/et_height" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:paddingHorizontal="14dp" android:inputType="number" android:textColor="@color/text_primary" android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Weight (kg)" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/et_weight" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:paddingHorizontal="14dp" android:inputType="number" android:textColor="@color/text_primary" android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Allergies or conditions" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/et_allergies" android:layout_width="match_parent" android:layout_height="80dp" android:background="@drawable/bg_input" android:padding="14dp" android:gravity="top" android:inputType="textMultiLine" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginBottom="14dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chronic conditions" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/et_conditions" android:layout_width="match_parent" android:layout_height="80dp" android:background="@drawable/bg_input" android:padding="14dp" android:gravity="top" android:inputType="textMultiLine" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginBottom="14dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Current medications" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/et_medications" android:layout_width="match_parent" android:layout_height="80dp" android:background="@drawable/bg_input" android:padding="14dp" android:gravity="top" android:inputType="textMultiLine" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginBottom="14dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Preferred hospital" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/et_hospital" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:paddingHorizontal="14dp" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginBottom="20dp"/>
+
+        <!-- Medical aid -->
+        <TextView
+            style="@style/SectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MEDICAL AID"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Provider" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/et_aid_provider" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:paddingHorizontal="14dp" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginBottom="14dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Membership number" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/et_aid_number" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:paddingHorizontal="14dp" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginBottom="20dp"/>
+
+        <!-- Emergency contact -->
+        <TextView
+            style="@style/SectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EMERGENCY CONTACT"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact name" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/et_ec_name" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:paddingHorizontal="14dp" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginBottom="14dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact phone" android:textColor="@color/text_secondary" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+        <EditText android:id="@+id/et_ec_phone" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_input" android:paddingHorizontal="14dp" android:inputType="phone" android:textColor="@color/text_primary" android:textSize="14sp" android:layout_marginBottom="14dp"/>
+
+        <Button
+            android:id="@+id/btn_save_medical"
+            style="@style/ARTSButton.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save medical information" />
+
+    </LinearLayout>
+</ScrollView>

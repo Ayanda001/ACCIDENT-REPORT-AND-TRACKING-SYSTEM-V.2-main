@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/nav_home" />
+
+    <item
+        android:id="@+id/incidentsFragment"
+        android:icon="@drawable/ic_incidents"
+        android:title="@string/nav_incidents" />
+
+    <!-- Empty item for FAB space -->
+    <item
+        android:id="@+id/placeholder"
+        android:icon="@drawable/ic_home"
+        android:title=""
+        android:enabled="false"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/alertsFragment"
+        android:icon="@drawable/ic_alerts"
+        android:title="@string/nav_alerts" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/nav_profile" />
+
+</menu>

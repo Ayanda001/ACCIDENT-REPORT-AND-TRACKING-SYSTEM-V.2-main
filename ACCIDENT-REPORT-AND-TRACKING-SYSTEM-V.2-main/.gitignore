@@ -1,0 +1,19 @@
+*.iml
+.gradle
+/local.properties
+.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Local configuration and secrets
+local.properties
+local.properties.txt
+
+
+# Generated Android build files
+**/build/
+

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <!-- Auth -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.arts.fragments.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.arts.fragments.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_register_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Main App Fragments -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.arts.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/incidentsFragment"
+        android:name="com.example.arts.fragments.IncidentsFragment"
+        android:label="Incidents"
+        tools:layout="@layout/fragment_incidents">
+        <action
+            android:id="@+id/action_incidents_to_detail"
+            app:destination="@id/incidentDetailFragment">
+            <argument
+                android:name="incidentId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/incidentDetailFragment"
+        android:name="com.example.arts.fragments.IncidentDetailFragment"
+        android:label="Incident Detail"
+        tools:layout="@layout/fragment_incident_detail">
+        <argument
+            android:name="incidentId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/alertsFragment"
+        android:name="com.example.arts.fragments.AlertsFragment"
+        android:label="Alerts"
+        tools:layout="@layout/fragment_alerts" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.arts.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/reportAccidentFragment"
+        android:name="com.example.arts.fragments.ReportAccidentFragment"
+        android:label="Report Accident"
+        tools:layout="@layout/fragment_report_accident" />
+
+    <fragment
+        android:id="@+id/medicalInfoFragment"
+        android:name="com.example.arts.fragments.MedicalInfoFragment"
+        android:label="Medical Information"
+        tools:layout="@layout/fragment_medical_info" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.arts.fragments.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.arts.fragments.HelpFragment"
+        android:label="Help and Support"
+        tools:layout="@layout/fragment_help" />
+
+    <fragment
+        android:id="@+id/aiAssistantFragment"
+        android:name="com.example.arts.fragments.AiAssistantFragment"
+        android:label="AI Assistant"
+        tools:layout="@layout/fragment_ai_assistant" />
+
+    <fragment
+        android:id="@+id/voiceReportFragment"
+        android:name="com.example.arts.fragments.VoiceReportFragment"
+        android:label="Voice Report"
+        tools:layout="@layout/fragment_voice_report" />
+
+    <fragment
+        android:id="@+id/helplinesFragment"
+        android:name="com.example.arts.fragments.HelplinesFragment"
+        android:label="Emergency Helplines"
+        tools:layout="@layout/fragment_helplines" />
+
+    <fragment
+        android:id="@+id/nearbyUnitsFragment"
+        android:name="com.example.arts.fragments.NearbyUnitsFragment"
+        android:label="Nearby Units"
+        tools:layout="@layout/fragment_nearby_units" />
+
+    <fragment
+        android:id="@+id/safetyScoreFragment"
+        android:name="com.example.arts.fragments.SafetyScoreFragment"
+        android:label="Safety Score"
+        tools:layout="@layout/fragment_safety_score" />
+
+    <fragment
+        android:id="@+id/communityFragment"
+        android:name="com.example.arts.fragments.CommunityFragment"
+        android:label="Community Feed"
+        tools:layout="@layout/fragment_community" />
+
+    <fragment
+        android:id="@+id/weatherAlertFragment"
+        android:name="com.example.arts.fragments.WeatherAlertFragment"
+        android:label="Weather Alert"
+        tools:layout="@layout/fragment_weather_alert" />
+
+</navigation>

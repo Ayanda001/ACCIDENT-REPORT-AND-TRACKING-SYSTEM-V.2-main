@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "296350946511",
+    "project_id": "arts-477f0",
+    "storage_bucket": "arts-477f0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296350946511:android:da6fed4a944a0d33b613ba",
+        "android_client_info": {
+          "package_name": "com.example.arts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296350946511-b4fn5stqomdq8hrucavo8lribt83lfa5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.arts",
+            "certificate_hash": "b7ddcfc0f217e9b26bfdb088dd856098c4e9844e"
+          }
+        },
+        {
+          "client_id": "296350946511-mfhqtitq6bdjtnjcqdg6fjb5fhrumfe8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4-xSAasl4wga-rM2H_L7kA6h0YhpqJG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296350946511-mfhqtitq6bdjtnjcqdg6fjb5fhrumfe8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

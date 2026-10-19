@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="14dp"
+        android:background="@color/bg_secondary">
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_back"
+            android:layout_marginEnd="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:tint="@color/accent_green"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Voice Report" android:textColor="@color/text_primary"
+            android:textSize="17sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp">
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/accent_green_tint" app:cardCornerRadius="16dp" app:cardElevation="0dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Tap Record and describe the accident. ARTS AI will turn your words into a proper report and send it with your location."
+                    android:textColor="@color/accent_green" android:textSize="13.5sp" android:lineSpacingExtra="2dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView android:id="@+id/tv_voice_status"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Tap Record to begin" android:textColor="@color/text_secondary"
+                android:textSize="14sp" android:gravity="center" android:layout_marginBottom="16dp"/>
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="140dp" android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="12dp" app:cardElevation="0dp">
+                <TextView android:id="@+id/tv_transcript"
+                    android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:padding="16dp" android:gravity="top"
+                    android:hint="Your spoken report will appear here..."
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/text_primary" android:textSize="14sp"/>
+            </androidx.cardview.widget.CardView>
+
+            <Button android:id="@+id/btn_record"
+                android:layout_width="match_parent" android:layout_height="54dp"
+                android:text="Record" android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/accent_green" android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <Button android:id="@+id/btn_submit_voice"
+                android:layout_width="match_parent" android:layout_height="54dp"
+                android:text="Submit voice report"
+                android:backgroundTint="@color/alert_red" android:textColor="@color/white"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

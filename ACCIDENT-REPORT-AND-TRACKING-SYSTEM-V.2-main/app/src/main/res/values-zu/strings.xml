@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- isiZulu - starting point covering bottom navigation only, since
+         most other screens use fixed text in their layouts rather than
+         string resources. Extend this file to localize more screens. -->
+    <string name="app_name">ARTS</string>
+    <string name="nav_home">Ikhaya</string>
+    <string name="nav_incidents">Izigameko</string>
+    <string name="nav_alerts">Izaziso</string>
+    <string name="nav_profile">Iphrofayela</string>
+</resources>
